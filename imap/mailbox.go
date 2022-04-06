@@ -307,9 +307,12 @@ func (mbox *mailbox) SearchMessages(isUID bool, c *imap.SearchCriteria) ([]uint3
 		return nil, err
 	}
 
-	// TODO: c.Not, c.Or
-	if c.Not != nil || c.Or != nil {
-		return nil, errors.New("search queries with NOT or OR clauses are not yet implemented")
+	if c.Not != nil {
+		//ignore for K-9 (Android) support
+	}
+
+	if c.Or != nil {
+		return nil, errors.New("unsupported search query")
 	}
 
 	var results []uint32
