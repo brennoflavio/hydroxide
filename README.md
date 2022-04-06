@@ -1,3 +1,7 @@
+# Note
+
+This fork allows K9 mail (Android) support in hydroxide. It is hacky, not guaranteed that will work on other clients and has no support here or upstream. I'll try my best to maintain it tough.
+
 # hydroxide
 
 A third-party, open-source ProtonMail bridge. For power users only, designed to
